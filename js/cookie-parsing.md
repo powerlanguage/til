@@ -3,6 +3,10 @@
 > Note that each key and value may be surrounded by whitespace (space and tab characters): in fact, RFC 6265 mandates a single space after each semicolon, but some user agents may not abide by this.
 > [source](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
 
+The `key` and `value` are separated by a `=`.
+
+E.g. `;domain=example.com; _ga=GA1.2.979733959.1595867169 dwf_sg_task_completion=False`
+
 To separate keys/values we have to indentify the first `'='` in the cookie string. We cannot use `cookieString.split('=')` as `'='` is a valid character for the cookie value to contain.
 
 ```
